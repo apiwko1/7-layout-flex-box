@@ -1,0 +1,87 @@
+/* kolory */
+body{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+header{
+    background-color: #FF4500;
+}
+.aleft{
+    background-color: #228B22;
+}
+.main{
+    background-color: #00BFFF;
+}
+.aright{
+    background-color: #FFB6C1;
+}
+footer{
+    background-color: #9370DB;
+}
+
+/* położenie */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header, footer{
+    width: 100%;
+    padding: 0.5em 0;
+}
+aside{
+    width: 15%;
+}
+section{
+    width: 70%;
+    min-height: 15em;
+}
+
+/* poniżej 992px */
+@media screen and (max-width: 992px ) {
+    .aleft{
+        width: 100%;   
+        min-height: 15em;             
+    }
+    .aright{
+        width: 20%;
+    }
+    section{
+        width: 80%;
+    }
+    header{
+        order: 0;
+    }
+    section{
+        order: 1;
+    }
+    .aright{
+        order: 2;
+    }
+    .aleft{
+        order: 3;
+    }
+    footer{
+        order: 4;
+    }
+
+}
+
+@media  screen and (max-height: 768px) {
+    .aright{
+        width: 100%;
+    }
+    section{
+        width: 100%;
+    }
+
+    .aright{
+        order: 3;
+        min-height: 15em;
+    }
+    .aleft{
+        order: 2;
+    }    
+}
